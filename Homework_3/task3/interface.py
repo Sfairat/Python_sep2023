@@ -15,13 +15,16 @@ def menu_bank_card(Card):
     while True:
         print("1. Пополнить счёт.")
         print("2. Снять наличные.")
-        print("3. Выйти.")
+        print("3. Вывести список операций.")
+        print("4. Выйти.")
         choice = input("")
         if choice == "1":
             engine.add_money(Card)
         elif choice == "2":
             engine.withdraw_money(Card)
         elif choice == "3":
+            engine.transaction_history()
+        elif choice == "4":
             print("Ждем Вас снова!")
             engine.end()
         else:
